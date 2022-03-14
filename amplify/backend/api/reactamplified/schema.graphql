@@ -1,0 +1,20 @@
+type Reviews @model @auth(rules: [{allow: public}, {allow: owner}]) {
+  id: ID!
+  rcRequestLink: String!
+  amzProductTitle: String
+  amzProductLink: String
+  amzOrderLink: String
+  orderDate: AWSDate
+  orderAmount: Float
+  commissionAmount: Float
+  productReceivedDate: AWSDate
+  amzReviewSubmitDate: AWSDate
+  amzReviewPublishDate: AWSDate
+  rcReviewSubmitDate: AWSDate
+  refundDate: AWSDate
+  refundAmount: Float
+  notes: [AWSJSON]
+  rcSellerFeedbackSubmitDate: AWSDate
+  amzSellerFeedbackSubmitDate: AWSDate
+}
+ 
